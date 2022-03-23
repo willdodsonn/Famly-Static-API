@@ -15,8 +15,8 @@ class FamilyStructure:
         # example list of members
         self._members = [
             {
-                "name": "Jacob"
-                "id": 321
+                "name": "George",
+                "id": 123
             }
             
         ]
@@ -27,7 +27,7 @@ class FamilyStructure:
 
     def add_member(self, member):
         # fill this method and update the return
-        self._members.append(members)
+        self._members.append(member)
         return self._members
 
     def delete_member(self, id):
@@ -35,13 +35,14 @@ class FamilyStructure:
         for x in range(len(self._members)):
             if self._members[x]["id"] == id:
                 removed = self._members.pop(x)
-    return removed            
+        return removed            
 
     def get_member(self, id):
         # fill this method and update the return
         for person in range(self._members):
-            if person["id"] ==id:
-         return None
+            if person["id"] == id:
+                return person
+        return None
 
     # this method is done, it returns a list with all the family members
     def get_all_members(self):
